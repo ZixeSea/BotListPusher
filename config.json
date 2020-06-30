@@ -1,0 +1,16 @@
+{
+	"guilds": 0,
+	"shards": 0,
+	"sites": [
+		{
+			"url": "<full link>",
+			"token": "<token>"
+		}
+	],
+	"disabled": [
+		{
+			"url": "<full link>",
+			"token": "<token>"
+		}
+	]
+}
