@@ -1,8 +1,9 @@
 # BotListPusher, simple data pusher for discord bot sites
-**This is a small JS app that pushes data to discord bot list sites, is also give nice feedback if something goes wrong.**
 [![Discord Badge](https://discordapp.com/api/guilds/98834803738054656/embed.png)](https://discordapp.com/invite/bZt8WkS)
 [![Version Badge](https://img.shields.io/badge/Version-1.0.0-green.svg)](https://github.com/ZixeSea/BotListPusher)
 [![In progress Badge](https://img.shields.io/badge/In%20progress-yes-green.svg)](https://zixesea.com)
+
+**This is a small JS app that pushes data to discord bot list sites, is also give nice feedback if something goes wrong.**
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ZixeSea/BotListPusher/blob/master/LICENSE.md) file for details
