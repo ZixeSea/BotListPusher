@@ -7,43 +7,35 @@ const serversAmount = !config.guilds || config.guilds == 0 ? undefined : config.
 const shardsAmount = !config.shards || config.shards == 0 ? undefined : config.shards;
 let log = '';
 
-const addSpace = (text) => {
-	while (text.length < 26) {
-		text += ' ';
-	}
-	return text;
+const requestBuilder = (list) => {
+	let result = {
+		url: list.url,
+		method: 'POST',
+		headers: {
+			authorization: list.token,
+			'content-Type': 'application/json'
+		},
+		data: {}
+	};
+
+	result.data[list.serversPar] = serversAmount;
+	if (list.shardsPar) result.data[list.shardsPar] = shardsAmount;
+	return result;
 };
 
 const logger = (i, list, message, color) => {
-	log += `${color}[${i + 1 < 10 ? `0${i + 1}` : i + 1}/${list.length < 10
-		? `0${list.length}`
-		: list.length}] | ${addSpace(`${list[i].url.slice('https://'.length).split('/')[0]}`)} | ${message}\x1b[0m\n`;
+	log += `${color}[${`${i + 1}`.padStart(2, '0')}/${`${list.length}`.padStart(2, '0')}] | ${`${list[i].url
+		.slice('https://'.length)
+		.split('/')[0]}`.padEnd(26)} | ${message}\x1b[0m\n`;
 };
 
 const dataPuster = async () => {
 	const start = new Date();
 	for (let i = 0; i < list.length; i++) {
-		if (!list[i].url || !list[i].token) return;
+		if (!list[i].url || !list[i].token || !list[i].serversPar) return;
 
-		await axios({
-			url: list[i].url,
-			method: 'POST',
-			headers: {
-				authorization: list[i].token,
-				'content-Type': 'application/json'
-			},
-			data: {
-				server_count: serversAmount,
-				guild_count: serversAmount,
-				serverCount: serversAmount,
-				guildCount: serversAmount,
-				servers: serversAmount,
-				guilds: serversAmount,
-				shard_count: shardsAmount,
-				shardCount: shardsAmount,
-				shard: shardsAmount
-			}
-		})
+		const request = requestBuilder(list[i]);
+		await axios(request)
 			.then((rsp) => {
 				Bar.update(i + 1);
 				if (rsp.status !== 200 && rsp.status !== 204) {
@@ -82,3 +74,14 @@ if (list.length <= 0) {
 	Bar.init(list.length);
 	dataPuster();
 }
+
+// server_count: serversAmount,
+// guild_count: serversAmount,
+// serverCount: serversAmount,
+// guildCount: serversAmount,
+// servers: serversAmount,
+// guilds: serversAmount,
+// shard_count: shardsAmount,
+// shardCount: shardsAmount,
+// shards: shardsAmount,
+// shard: shardsAmount
