@@ -4,13 +4,17 @@
 	"sites": [
 		{
 			"url": "<full link>",
-			"token": "<token>"
+			"token": "<token>",
+			"serversPar": "<par name>",
+			"shardsPar": "<par name>"
 		}
 	],
 	"disabled": [
 		{
 			"url": "<full link>",
-			"token": "<token>"
+			"token": "<token>",
+			"serversPar": "<par name>",
+			"shardsPar": "<par name>"
 		}
 	]
 }
