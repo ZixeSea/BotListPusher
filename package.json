@@ -1,6 +1,6 @@
 {
 	"name": "botlistpusher",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Data pusher for bot list sites that the bot doesn't auto update anymore.",
 	"homepage": "https://zixesea.github.io/serverstats.com/",
 	"main": "index.js",

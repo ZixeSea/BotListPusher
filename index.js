@@ -74,14 +74,3 @@ if (list.length <= 0) {
 	Bar.init(list.length);
 	dataPuster();
 }
-
-// server_count: serversAmount,
-// guild_count: serversAmount,
-// serverCount: serversAmount,
-// guildCount: serversAmount,
-// servers: serversAmount,
-// guilds: serversAmount,
-// shard_count: shardsAmount,
-// shardCount: shardsAmount,
-// shards: shardsAmount,
-// shard: shardsAmount
