@@ -9,17 +9,16 @@
 		"test": "nodemon index.js"
 	},
 	"engines": {
-		"node": "^10.16.0",
-		"npm": "^6.9.0"
+		"node": ">=20.0.0"
 	},
 	"author": {
 		"name": "ZixeSea",
-		"email": "support@serverstatsbot.com",
-		"url": "https://serverstatsbot.com"
+		"url": "https://zixesea.dev/"
 	},
 	"license": "UNLICENSED",
 	"private": true,
 	"dependencies": {
-		"axios": "1.7.3"
+		"axios": "^1.12.2"
 	}
 }
+
