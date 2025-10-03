@@ -10,7 +10,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Requirements
 - `git` Command line ([Windows](https://git-scm.com/download/win)|[Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)|[MacOS](https://git-scm.com/download/mac)) installed
-- `node` [Version 8.0.0 or higher](https://nodejs.org)
+- `node` [Version 20.0.0 or higher](https://nodejs.org)
 - `config file` Required a config file that holds links and toklens for the sites
 
 ## Downloading
@@ -25,7 +25,7 @@ Once finished:
 - Now go to `BotListPusher/config.json` and open it, and add sites like this (the list is an array so you can add more with `,`)
 ```
 {
-	"url": "https://example.com/12342423/stats"",
+	"url": "https://example.com/12342423/stats",
 	"token": "g4353fdwsf342",
 	"serversPar": "guildCount",
 	"shardsPar": "shardCount"
